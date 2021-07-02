@@ -26,3 +26,4 @@ jobs:
       shell: python
     - name: checkout branch
       run: os.system("git checkout master")
+      shell: python
