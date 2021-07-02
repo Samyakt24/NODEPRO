@@ -21,8 +21,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: import os
-      run: import os
-      shell: python
-    - name: checkout branch
-       run: echo running on branch ${GITHUB_REF##*/}
+    - uses: actions/checkout@v2
+     with:
+      ref: master
+      repository:  Samyakt24 /NODEPRO
