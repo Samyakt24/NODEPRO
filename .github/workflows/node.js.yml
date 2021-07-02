@@ -24,4 +24,5 @@ jobs:
     - uses: actions/checkout@v2
       with:
         ref: master
-        run: cat packet.json
+    - name: packet.json 
+      run: cat packet.json
