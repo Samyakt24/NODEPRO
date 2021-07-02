@@ -21,6 +21,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: checkout branch
+    - name: import os
       run: import os
       shell: python
+    - name: checkout branch
+      run: os.system("git checkout master")
