@@ -18,24 +18,20 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v2https://github.com/Samyakt24/LearnGit.git"
+      
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm update
-      run: npx npm-check-updates -u
-    - name: npm installation
-      run: npm install
-    - name: set email
-      run: git config --global user.email "samyaktjain1999@gmail.com"
-    - name: set name
-      run:   git config --global user.name "Samyakt24"
-    - name: packet json commit
-      run: git commit package.json -m "Commit"
-    - name: setup Python
-      uses: actions/setup-python@v2
-      with:
-          python-version: '3.7.7' # install the python version needed
-    - name: Python code    
-      run: python -c "import os;  os.chdir('public')"
-    - name: list the file
-      run: ls  
+      run: |
+        npx npm-check-updates -u
+        npm install
+        git config --global user.email "samyaktjain1999@gmail.com"
+        git config --global user.name "Samyakt24"
+        git commit package.json -m "Commit"
+        
+    - name: Repo A
+      run: |
+        git clone "https://github.com/Samyakt24/LearnGit.git"
+        git commit package.json -m "Commit"
+        
