@@ -32,6 +32,9 @@ jobs:
     - run: git config --global user.email "samyaktjain1999@gmail.com"
     - run: git config --global user.name "Samyakt24"
     - run: git add package.json
+    - run:  git remote update
+    - run:  git fetch 
+    - run: git checkout --track origin/<BRANCH-NAME>
     - run: git checkout master
     - run: git commit package.json -m "hello"
 
