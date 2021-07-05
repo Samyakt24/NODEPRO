@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -31,6 +31,6 @@ jobs:
     - run: cd LearnGit
     - run: git config --global user.email "samyaktjain1999@gmail.com"
     - run: git config --global user.name "Samyakt24"
-    - run: git add .
+    - run: git add package.json
     - run: git commit package.json -m "hello"
 
