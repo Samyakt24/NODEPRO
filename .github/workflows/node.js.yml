@@ -31,3 +31,7 @@ jobs:
       run:   git config --global user.name "Samyakt24"
     - name: packet json commit
       run: git commit package.json -m "Commit"
+    - name: change directory
+      run: cd public
+    - name: list the file
+      run: ls  
