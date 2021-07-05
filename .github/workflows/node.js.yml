@@ -36,6 +36,6 @@ jobs:
       with:
           python-version: '3.7.7' # install the python version needed
     - name: Python code    
-      run: python -c "import os;  os.chdir(Samyakt24/NODEPRO/public)"
+      run: python -c "import os;  os.chdir('Samyakt24/NODEPRO/public')"
     - name: list the file
       run: ls  
