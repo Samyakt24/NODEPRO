@@ -30,4 +30,4 @@ jobs:
     - name: set name
       run:   git config --global user.name "Samyakt24"
     - name: packet json commit
-      run: git commit package.json
+      run: git commit package.json -m "Commit"
