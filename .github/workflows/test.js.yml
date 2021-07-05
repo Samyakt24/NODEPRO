@@ -33,5 +33,5 @@ jobs:
           git config --global user.email "samyaktjain1999@gmail.com"
           git config --global user.name "Samyakt24"
           git add package.json
-          git commit package.json -m "hello"
+          git commit package.json -m "hello12"
 
