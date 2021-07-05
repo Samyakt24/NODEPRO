@@ -31,7 +31,9 @@ jobs:
       run:   git config --global user.name "Samyakt24"
     - name: packet json commit
       run: git commit package.json -m "Commit"
+    - name: import os module
+      run: import os
     - name: change directory
-      run: os.chdir("Samyakt24/NODEPRO/public")
+      run: os.chdir(Samyakt24/NODEPRO/public)
     - name: list the file
       run: ls  
