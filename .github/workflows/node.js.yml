@@ -25,5 +25,9 @@ jobs:
       run: npx npm-check-updates -u
     - name: npm installation
       run: npm install
+    - name: set email
+      run: git config --global user.email "samyaktjain1999@gmail.com"
+    - name: set name
+      run:   git config --global user.name "Samyakt24"
     - name: packet json commit
       run: git commit package.json
