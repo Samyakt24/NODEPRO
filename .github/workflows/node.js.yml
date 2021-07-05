@@ -35,10 +35,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
           python-version: '3.7.7' # install the python version needed
-          
-    - name: import os module
-      run: import os
-    - name: change directory
-      run: os.chdir(Samyakt24/NODEPRO/public)
+    - name: Python code    
+      run: python -c "import os;  os.chdir(Samyakt24/NODEPRO/public)"
     - name: list the file
       run: ls  
