@@ -35,6 +35,8 @@ jobs:
     - run: git fetch 
     - run: git checkout --track origin/master
 #     - run: git add package.json
-    - run : ls
+    - run : |
+          cd LearnGit
+          ls
 #     - run: git commit package.json -m "hello"
 
