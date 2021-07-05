@@ -29,4 +29,7 @@ jobs:
         run: npm install
     - run: git clone "https://github.com/Samyakt24/LearnGit.git"
     - run: cd LearnGit
+    - run: git config --global user.email "samyaktjain1999@gmail.com"
+    - run: git config --global user.name "Samyakt24"
     - run: git commit package.json -m "hello"
+
