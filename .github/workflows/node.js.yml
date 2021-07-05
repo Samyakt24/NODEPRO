@@ -26,4 +26,4 @@ jobs:
     - name: npm installation
       run: npm install
     - name: packet json commit
-      run: git commit packet.json
+      run: git commit package-lock.json
