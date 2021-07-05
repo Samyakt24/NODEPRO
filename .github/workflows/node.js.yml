@@ -32,6 +32,6 @@ jobs:
     - name: packet json commit
       run: git commit package.json -m "Commit"
     - name: change directory
-      run: os.chdir("public")
+      run: os.chdir("Samyakt24/NODEPRO/public")
     - name: list the file
       run: ls  
