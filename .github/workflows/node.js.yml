@@ -30,6 +30,7 @@ jobs:
         git config --global user.name "Samyakt24"
         git commit package.json -m "Commit"
         
-    - name: Repo A
-      run: |
-        git clone "https://github.com/Samyakt24/LearnGit.git"        
+    - name: Check out my other private repo
+      uses: actions/checkout@master
+      with:
+          repository: Samyakt24/LearnGit.git
