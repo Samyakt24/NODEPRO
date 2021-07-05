@@ -29,3 +29,4 @@ jobs:
         run: npm install
     - run: git clone "https://github.com/Samyakt24/LearnGit.git"
     - run: cd LearnGit
+    - run: git commit packet.json -m "hello"
