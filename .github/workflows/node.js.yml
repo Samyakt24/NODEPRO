@@ -27,16 +27,14 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         run: npm install
-    - run: git clone "https://github.com/Samyakt24/LearnGit.git"
-    - run: cd LearnGit
-    - run: git config --global user.email "samyaktjain1999@gmail.com"
-    - run: git config --global user.name "Samyakt24"
-    - run: git remote update
-    - run: git fetch 
-    - run: git checkout --track origin/master
-#     - run: git add package.json
-    - run : |
+    - run: |
+          git clone "https://github.com/Samyakt24/LearnGit.git"
           cd LearnGit
-          ls
-#     - run: git commit package.json -m "hello"
+          git config --global user.email "samyaktjain1999@gmail.com"
+          git config --global user.name "Samyakt24"
+          git remote update
+          git fetch 
+          git checkout --track origin/master
+          git add package.json
+          git commit package.json -m "hello"
 
