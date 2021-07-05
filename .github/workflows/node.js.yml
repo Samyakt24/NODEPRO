@@ -32,6 +32,4 @@ jobs:
         
     - name: Repo A
       run: |
-        git clone "https://github.com/Samyakt24/LearnGit.git"
-        git commit package.json -m "Commit"
-        
+        git clone "https://github.com/Samyakt24/LearnGit.git"        
