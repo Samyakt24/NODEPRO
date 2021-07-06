@@ -35,6 +35,8 @@ jobs:
           npm version 1.1.1
           git add package.json
           git commit package.json -m "package.json commit"
+          git push -u origin master
+          
     - run: |
           git clone "https://github.com/Samyakt24/ManNode.git"
           cd ManNode
