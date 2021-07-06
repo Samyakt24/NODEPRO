@@ -27,7 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         run: npm install
-    - name: Repo 1
     - run: |
           git clone "https://github.com/Samyakt24/LearnGit.git"
           cd LearnGit
@@ -35,7 +34,6 @@ jobs:
           git config --global user.name "Samyakt24"
           npx npm-check-updates -u
           npm install
-    - name: Repo 2    
     - run: |
           git clone "https://github.com/Samyakt24/ManNode.git"
           cd ManNode
