@@ -6,8 +6,7 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  
 
 jobs:
   build:
@@ -20,11 +19,11 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2 #This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v2 #  # Reference a specific version
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: ${{ matrix.node-version }}  #use node version which define above
         cache: 'npm'
         run: npm install
     - run: |
