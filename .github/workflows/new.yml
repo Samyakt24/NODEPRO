@@ -32,12 +32,8 @@ jobs:
           cd LearnGit
           git config --global user.email "samyaktjain1999@gmail.com"
           git config --global user.name "Samyakt24"
-          npx npm-check-updates -u
-          npm install
+          npm version 1.1.1
     - run: |
           git clone "https://github.com/Samyakt24/ManNode.git"
           cd ManNode
-          git config --global user.email "samyaktjain1999@gmail.com"
-          git config --global user.name "Samyakt24"
-          npx npm-check-updates -u
-          npm install
+          npm version 1.1.1
