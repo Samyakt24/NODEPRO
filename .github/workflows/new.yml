@@ -31,12 +31,10 @@ jobs:
         
           
     - run: |
-          git clone "https://github.com/Samyakt24/ManNode.git"
-          cd ManNode
+          git clone "https://github.com/Samyakt24/Private1.git"
+          cd Private1
           npm version 1.1.1
-          git add package.json
-          git commit package.json -m "package.json commit"
-          npm 1.1.2 patch --no-git-tag-version
+          npm version patch --no-git-tag-version
           git add package.json
           git commit package.json -m "package.json commit"
           git checkout main
