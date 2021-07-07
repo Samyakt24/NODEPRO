@@ -28,7 +28,7 @@ jobs:
       
 
     - run: |
-          git clone https://${TOKEN}:x-oauth-basic@github.com/Samyakt24/Private1.git
+          git clone https://TOKEN:x-oauth-basic@github.com/Samyakt24/Private1.git
           cd Private1
           ls
           
