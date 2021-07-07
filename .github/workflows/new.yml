@@ -23,10 +23,13 @@ jobs:
         node-version: ${{ matrix.node-version }}  #use node version which define above
         cache: 'npm'
         run: npm install
+    - name: Configure git
+      env:
+        TOKEN: ${{ secrets.GITACTION }}
       
 
     - run: |
-          git clone https://${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}:x-oauth-basic@github.com/Samyakt24/Private1.git
+          git clone https://${TOKEN}:x-oauth-basic@github.com/Samyakt24/Private1.git
           cd Private1
           ls
           
