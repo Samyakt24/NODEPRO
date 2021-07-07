@@ -23,11 +23,9 @@ jobs:
         node-version: ${{ matrix.node-version }}  #use node version which define above
         cache: 'npm'
         run: npm install
-      env:
-        WHO_TO_TRUST: ${{ secrets.GITACTION }}
 
     - run: |
-          git clone "https://Samyakt24:WHO_TO_TRUST@github.com/Samyakt24/Private1.git"
+          git clone "https://Samyakt24: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@github.com/Samyakt24/Private1.git"
           cd Private1
           ls
           
