@@ -16,13 +16,11 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2 #This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2 #  # Reference a specific version
-    - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.5.3
-      with:
-        host: github.com
-        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: Clone repository
-      run: git clone git@github.com:Samyakt24/Private1.git
+      - uses: actions/checkout@v2
+            # Make sure the @v0.5.3 matches the current version of the
+            # action 
+      - uses: webfactory/ssh-agent@v0.5.3
+        with:
+          sh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Clone repository
+        run: git clone git@github.com:Samyakt24/Private1.git
