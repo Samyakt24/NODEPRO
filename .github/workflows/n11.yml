@@ -3,26 +3,17 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
-  
-
+    
 jobs:
-  build:
-
+  clone:
+    name: Clone
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-      - uses: actions/checkout@v2
-            # Make sure the @v0.5.3 matches the current version of the
-            # action 
-      - uses: shimataro/ssh-key-action@v2
-        with:
+    - name: Setup SSH
+      uses: MrSquaare/ssh-setup-action@v1
+      with:
           host: github.com
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           
-      - name: Clone repository
-        run: git clone git@github.com:Samyakt24/Private1.git
+    - name: Clone repository
+      run: git clone git@github.com:Samyakt24/Private1.git
