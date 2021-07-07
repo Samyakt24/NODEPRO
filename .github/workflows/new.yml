@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
     - run: |
-          git clone "https://Samyakt24:24helloWORLD@1234@github.com/Samyakt24/Private1.git"
+          git clone "https://Samyakt24:24helloWORLD@github.com/Samyakt24/Private1.git"
           cd Private1
           ls
           
