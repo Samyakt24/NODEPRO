@@ -19,8 +19,9 @@ jobs:
     - uses: actions/checkout@v2 #This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2 #  # Reference a specific version
-      
-      with:
+    -  name: Setup SSH
+    -  uses: MrSquaare/ssh-setup-action@v1
+       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Clone repository
