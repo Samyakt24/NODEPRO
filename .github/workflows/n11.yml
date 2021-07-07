@@ -21,6 +21,7 @@ jobs:
             # action 
       - uses: shimataro/ssh-key-action@v2
         with:
+          host: github.com
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           
       - name: Clone repository
