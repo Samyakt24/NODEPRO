@@ -23,7 +23,6 @@ jobs:
         node-version: ${{ matrix.node-version }}  #use node version which define above
         cache: 'npm'
         run: npm install
-    - name: Configure git
       env:
         TOKEN: ${{ secrets.GITACTION }}
       
