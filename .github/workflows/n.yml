@@ -28,7 +28,7 @@ jobs:
       
 
     - run: |
-          git clone https://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:x-oauth-basic@github.com/Samyakt24/Private1.git
+          git clone https://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:x-oauth-basic@github.com/Samyakt24/Private1.git
           cd Private1
           ls
           
