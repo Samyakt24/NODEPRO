@@ -22,5 +22,6 @@ jobs:
       - uses: shimataro/ssh-key-action@v2
         with:
           sh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
       - name: Clone repository
         run: git clone git@github.com:Samyakt24/Private1.git
