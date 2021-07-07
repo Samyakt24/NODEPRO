@@ -19,16 +19,9 @@ jobs:
     - uses: actions/checkout@v2 #This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2 #  # Reference a specific version
-      with:
-        node-version: ${{ matrix.node-version }}  #use node version which define above
-        cache: 'npm'
-        run: npm install
-      env:
-        TOKEN: ${{ secrets.GITACTION }}
       
-
-    - run: |
-          git clone https://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:x-oauth-basic@github.com/Samyakt24/Private1.git
-          cd Private1
-          ls
-          
+      with:
+        host: github.com
+        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Clone repository
+      run: git clone git@github.com:Samyakt24/Private1.git
